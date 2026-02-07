@@ -18,11 +18,12 @@
 
 ---
 
-## 用 GitHub 管理简历的好处
+## 用 Git 代码库（如 GitHub）管理简历的好处
 
 - **版本管理** — 像管理代码一样管理简历：每次修改都是一次提交。可以开分支做不同岗位或草稿、用 `git diff` 对比版本、从历史里恢复任意旧版，再也不用在文件夹里堆满「最终版_v2_真的最终.pdf」。
 - **Actions 全自动编译** — 只需推送内容，GitHub Actions 在云端完成 LaTeX 编译。不用装本地 LaTeX，也不用自己点「导出 PDF」。每次推送都会自动跑一遍流程，产出可直接使用的 PDF。
 - **一条链接即可分享** — 编译好的 PDF 会发布到 `pdf` 分支。一个固定链接（如 `.../raw/pdf/resume-en.pdf`）即可用于个人主页、LinkedIn 或发给招聘方，每次推送后都是最新版。
+- **用 AI 润色** — 简历内容是纯文本（LaTeX），可用 [Codex](https://openai.com/codex/)、[GitHub Copilot](https://github.com/features/copilot)、[Cursor](https://cursor.com) 等代码助手在编辑器里快速润色措辞、按岗位改写经历或改语法。
 
 ---
 
