@@ -1,0 +1,57 @@
+# Build resume PDFs on push to main/master
+name: Build PDF
+
+on:
+  push:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile English resume
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+          working_directory: en
+          compiler: pdflatex
+          args: "-pdf -file-line-error -halt-on-error -interaction=nonstopmode"
+
+      - name: Compile Chinese resume
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+          working_directory: cn
+          compiler: latexmk
+          latexmk_use_xelatex: true
+
+      - name: Copy PDFs to root
+        run: |
+          cp en/resume.pdf ./resume-en.pdf
+          cp cn/resume.pdf ./resume-cn.pdf
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdfs
+          path: "*.pdf"
+
+      - name: Push PDFs to pdf branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan pdf
+          git rm -rf --cached . 2>/dev/null || true
+          git add -f *.pdf
+          if git diff --staged --quiet; then
+            echo "No PDF changes to commit"
+          else
+            git commit -m "Update PDFs [automated]"
+            git push -f origin pdf
+          fi

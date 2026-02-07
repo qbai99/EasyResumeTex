@@ -1,0 +1,11 @@
+# Local build outputs (CI builds on push)
+en/resume.pdf
+cn/resume.pdf
+resume-en.pdf
+resume-cn.pdf
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
