@@ -1,12 +1,12 @@
-# OpenResume
+# EasyResumeTex
 
-**你只需写好内容。** OpenResume 是一份简历模板，版式、PDF 导出和分享链接都由它自动完成——改两个文件、推送，即可得到可分享的 PDF 与链接。
+**你只需写好内容。** EasyResumeTex 是一份简历模板，版式、PDF 导出和分享链接都由它自动完成——改两个文件、推送，即可得到可分享的 PDF 与链接。
 
 **中文** | [**English**](README.md)
 
 ---
 
-## 为什么用 OpenResume？
+## 为什么用 EasyResumeTex？
 
 | 你来做 | 模板来做 |
 |--------|----------|
@@ -55,7 +55,7 @@ git push origin main
 ## 仓库结构
 
 ```
-openResume/
+EasyResumeTex/
 ├── en/
 │   ├── content.tex   ← 编辑：英文简历内容
 │   └── resume.tex    ← 模板（除非改版式，否则勿动）

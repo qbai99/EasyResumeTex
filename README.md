@@ -1,12 +1,12 @@
-# OpenResume
+# EasyResumeTex
 
-**Focus on your content.** OpenResume is a resume template that handles layout, PDF export, and shareable links for you—edit two files, push, and you're done.
+**Focus on your content.** EasyResumeTex is a resume template that handles layout, PDF export, and shareable links for you—edit two files, push, and you're done.
 
 [**中文说明**](README.zh-CN.md) | **English**
 
 ---
 
-## Why OpenResume?
+## Why EasyResumeTex?
 
 | You do | We do |
 |--------|--------|
@@ -55,7 +55,7 @@ You can put these links on your portfolio, LinkedIn, or send them directly to re
 ## Repository structure
 
 ```
-openResume/
+EasyResumeTex/
 ├── en/
 │   ├── content.tex   ← Edit: English resume content
 │   └── resume.tex    ← Template (don’t edit unless changing layout)
