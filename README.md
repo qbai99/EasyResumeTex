@@ -18,6 +18,14 @@ No LaTeX setup, no manual PDF export, no figuring out how to share. Just write y
 
 ---
 
+## Why use GitHub for your resume?
+
+- **Version control** — Treat your resume like code: every change is a commit. Branch for different roles or drafts, compare versions with `git diff`, and restore any previous version from history. No more “final_v2_final_really.pdf” in a folder.
+- **Actions build everything** — Push your content; GitHub Actions compiles LaTeX in the cloud. No local LaTeX install, no manual “Export to PDF.” The workflow runs on every push and produces ready-to-use PDFs.
+- **Share with one link** — Built PDFs are published to the `pdf` branch. One stable URL (e.g. `.../raw/pdf/resume-en.pdf`) works for your portfolio, LinkedIn, or recruiters—always up to date after each push.
+
+---
+
 ## Quick Start
 
 ### 1. Use this template
