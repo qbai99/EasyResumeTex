@@ -1,29 +1,22 @@
 # EasyResumeTex
 
-**你只需写好内容。** EasyResumeTex 是一份简历模板，版式、PDF 导出和分享链接都由它自动完成——改两个文件、推送，即可得到可分享的 PDF 与链接。
+**用 AI 编程与 Git 工具来写简历。**
+
+EasyResumeTex 是一份为「代码优先」流程设计的 LaTeX 简历模板：内容以纯文本存在，因此可以用 [Codex](https://openai.com/codex/)、[GitHub Copilot](https://github.com/features/copilot)、[Cursor](https://cursor.com) 或任意编辑器编辑；用 Git（如在 GitHub 上）做版本管理；推送后自动得到 PDF 和可分享链接。无需本地装 LaTeX、无需手动导出——写好、提交、分享即可。
 
 **中文** | [**English**](README.md)
 
 ---
 
-## 为什么用 EasyResumeTex？
+## 为什么用这种方式？
 
-| 你来做 | 模板来做 |
+| 你来做 | 你能得到 |
 |--------|----------|
-| 在两个文件中编辑简历**内容** | 版式、字体与排版 |
-| 推送到 GitHub | 在云端自动编译 PDF |
-| 分享一个链接 | 托管 PDF 并生成固定链接 |
+| 只改两个文件里的**内容**（`en/content.tex`、`cn/content.tex`） | 版式和 PDF 由模板和 CI 自动处理 |
+| 用 **AI 编程工具** 润色措辞、按岗位改经历、改语法 | 纯文本 LaTeX 可在任何代码编辑器里用任何助手编辑 |
+| 用 **Git**（分支、提交、diff、历史）并托管在 GitHub/GitLab | 版本管理、云端自动构建、一条固定链接即可分享 |
 
-不用配 LaTeX、不用自己导出 PDF、不用研究怎么分享。专注写你的经历即可。
-
----
-
-## 用 Git 代码库（如 GitHub）管理简历的好处
-
-- **版本管理** — 像管理代码一样管理简历：每次修改都是一次提交。可以开分支做不同岗位或草稿、用 `git diff` 对比版本、从历史里恢复任意旧版，再也不用在文件夹里堆满「最终版_v2_真的最终.pdf」。
-- **Actions 全自动编译** — 只需推送内容，GitHub Actions 在云端完成 LaTeX 编译。不用装本地 LaTeX，也不用自己点「导出 PDF」。每次推送都会自动跑一遍流程，产出可直接使用的 PDF。
-- **一条链接即可分享** — 编译好的 PDF 会发布到 `pdf` 分支。一个固定链接（如 `.../raw/pdf/resume-en.pdf`）即可用于个人主页、LinkedIn 或发给招聘方，每次推送后都是最新版。
-- **用 AI 润色** — 简历内容是纯文本（LaTeX），可用 [Codex](https://openai.com/codex/)、[GitHub Copilot](https://github.com/features/copilot)、[Cursor](https://cursor.com) 等代码助手在编辑器里快速润色措辞、按岗位改写经历或改语法。
+不再在文件夹里堆「最终版_v2_真的最终.pdf」，也不用和 Word 或 Google Docs 较劲。简历就是一个小型代码库：AI 帮你写，Git 帮你管。
 
 ---
 
@@ -31,7 +24,7 @@
 
 ### 1. 使用本模板
 
-在本仓库页面点击绿色的 **Use this template** 按钮（或 Fork 本仓库），即可在你自己的账号下生成一份副本，结构完全一致。
+在本仓库页面点击绿色的 **Use this template** 按钮（或 Fork 本仓库），生成属于你自己的副本。
 
 ### 2. 只改内容
 
@@ -40,7 +33,7 @@
 | **英文** | `en/content.tex` |
 | **中文** | `cn/content.tex` |
 
-把占位内容换成你的姓名、教育、经历和技能。除非要改版式，否则**不要**修改 `resume.tex` 等模板文件。
+把占位内容换成你的信息。在编辑器里用 AI 助手润色措辞。除非要改版式，否则**不要**改 `resume.tex` 等模板文件。
 
 ### 3. 推送即构建、即分享
 
@@ -52,13 +45,13 @@ git push origin main
 
 工作流跑完（约 1–2 分钟）后：
 
-- **下载 PDF**：在 **Actions** 里打开最近一次运行 → 下载 `resume-pdfs` 产物。
-- **分享链接**（将 `YOUR_USERNAME`、`YOUR_REPO` 换成你的 GitHub 用户名和仓库名）：
+- **下载 PDF**：打开 **Actions** → 最近一次运行 → 下载 `resume-pdfs` 产物。
+- **分享链接**（将 `YOUR_USERNAME`、`YOUR_REPO` 换成你的用户名和仓库名）：
   - 英文：`https://github.com/YOUR_USERNAME/YOUR_REPO/raw/pdf/resume-en.pdf`
   - 中文：`https://github.com/YOUR_USERNAME/YOUR_REPO/raw/pdf/resume-cn.pdf`
   - **示例 PDF**（本模板产出）：[resume-en.pdf](https://github.com/qbai99/EasyResumeTex/raw/pdf/resume-en.pdf) · [resume-cn.pdf](https://github.com/qbai99/EasyResumeTex/raw/pdf/resume-cn.pdf)
 
-可以把这些链接放在个人主页、LinkedIn 或直接发给招聘方。
+可把链接放在个人主页、LinkedIn 或直接发给招聘方。
 
 ---
 
@@ -82,10 +75,8 @@ EasyResumeTex/
 
 ## 本地编译（可选）
 
-如需在本机编译 PDF：
-
-- **英文**：在 `en/` 目录下执行 `pdflatex resume`（或用 `latexmk`）。
-- **中文**：在 `cn/` 目录下执行 `xelatex resume`（或使用 XeLaTeX 的 `latexmk`）。
+- **英文**：在 `en/` 下执行 `pdflatex resume`（或 `latexmk`）。
+- **中文**：在 `cn/` 下执行 `xelatex resume`（或使用 XeLaTeX 的 `latexmk`）。
 
 ---
 
