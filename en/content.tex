@@ -27,8 +27,14 @@
       {Company Name A}{City, Country}
       {Your Role Title}{Month 20XX - Present}
       \resumeItemListStart
-        \resumeItem{Project or responsibility name}
-          {Describe what you did and the impact. Use metrics where possible (e.g., improved X by Y\%, reduced latency to Z).}
+        \item \textbf{Project or responsibility name}:
+          \begin{itemize}[parsep=0pt, itemsep=1pt, leftmargin=*]
+            \item First point: description and impact; use metrics where possible (e.g., improved X by Y\%, reduced latency to Z).
+            \item Second point: another outcome or responsibility.
+            \item Third point: add more \verb|\item| as needed.
+          \end{itemize}
+        \resumeItem{Another responsibility}
+          {Single-line description when you do not need sub-bullets.}
       \resumeItemListEnd
 
     \resumeSubheading
