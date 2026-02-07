@@ -55,7 +55,7 @@ After the workflow runs (about 1–2 minutes):
 - **Share links** (replace `YOUR_USERNAME` and `YOUR_REPO` with your GitHub username and repo name):
   - English: `https://github.com/YOUR_USERNAME/YOUR_REPO/raw/pdf/resume-en.pdf`
   - 中文: `https://github.com/YOUR_USERNAME/YOUR_REPO/raw/pdf/resume-cn.pdf`
-  - **This template**: [github.com/qbai99/EasyResumeTex](https://github.com/qbai99/EasyResumeTex)
+  - **Example PDFs** (this template): [resume-en.pdf](https://github.com/qbai99/EasyResumeTex/raw/pdf/resume-en.pdf) · [resume-cn.pdf](https://github.com/qbai99/EasyResumeTex/raw/pdf/resume-cn.pdf)
 
 You can put these links on your portfolio, LinkedIn, or send them directly to recruiters.
 

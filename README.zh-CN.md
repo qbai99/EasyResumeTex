@@ -55,7 +55,7 @@ git push origin main
 - **分享链接**（将 `YOUR_USERNAME`、`YOUR_REPO` 换成你的 GitHub 用户名和仓库名）：
   - 英文：`https://github.com/YOUR_USERNAME/YOUR_REPO/raw/pdf/resume-en.pdf`
   - 中文：`https://github.com/YOUR_USERNAME/YOUR_REPO/raw/pdf/resume-cn.pdf`
-  - **本模板**：[github.com/qbai99/EasyResumeTex](https://github.com/qbai99/EasyResumeTex)
+  - **示例 PDF**（本模板产出）：[resume-en.pdf](https://github.com/qbai99/EasyResumeTex/raw/pdf/resume-en.pdf) · [resume-cn.pdf](https://github.com/qbai99/EasyResumeTex/raw/pdf/resume-cn.pdf)
 
 可以把这些链接放在个人主页、LinkedIn 或直接发给招聘方。
 
